@@ -10,6 +10,8 @@ chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.managed_default_content_settings.images": 2}
 chrome_options.add_experimental_option("prefs", prefs)
 chrome_options.add_argument('--headless')
+# Removing Navigator.Webdriver Flag
+chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 driver = webdriver.Chrome(options=chrome_options,desired_capabilities=capa)
 
 yisyong = Ruten('林義雄')
